@@ -1,7 +1,8 @@
-import React from 'react';
+import React from 'react'
 
-import './App.css';
+import './App.css'
 import 'styles/fonts/Inter/Inter.css'
+import 'aos/dist/aos.css';
 
 import { Route } from 'react-router-dom'
 import PeopleList from './components/List'
@@ -13,7 +14,9 @@ const App = () => (
         <Route exact path="/">
             <Layout><PeopleList /></Layout>
         </Route>
-        <Route exact path="/create" component={CreatePeople} />
+        <Route exact path="/add-person">
+            <Layout><CreatePeople /></Layout>
+        </Route>
     </main>
 )
 

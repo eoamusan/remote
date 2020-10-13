@@ -45,12 +45,32 @@ html, body {
     font-size: 0.75rem;
 }
 
+.size-pointeight-rem {
+    font-size: 0.8rem;
+}
+
+.size-pointnine-rem {
+    font-size: 0.9rem;
+}
+
 .size-one-rem {
     font-size: 1rem;
 }
 
 .size-onepointone-rem {
     font-size: 1.1rem;
+}
+
+.overflow-hidden {
+    overflow: hidden;
+}
+
+.overflow-auto-x {
+    overflow-x: auto;
+}
+
+.overflow-auto-y {
+    overflow-y: auto;
 }
 
 .border-box {
@@ -81,6 +101,10 @@ html, body {
     align-items: flex-end;
 }
 
+.justify-center {
+    justify-content: center;
+}
+
 .space-between {
     justify-content: space-between;
 }
@@ -91,6 +115,10 @@ html, body {
 
 .no-shrink {
     flex-shrink: 0;
+}
+
+.smooth {
+    transition: all 0.4s;
 }
 
 .no-select {
@@ -125,8 +153,24 @@ html, body {
     background-color: rgb(243, 247, 253);
 }
 
+.light-orange-bg {
+    background-color: #FFE8DF;
+}
+
 .box-shadow {
     box-shadow: 0px 1px 8px rgba(0, 0, 0, 0.05);
+}
+
+.width-40 {
+    width: 40px;
+}
+
+.height-1 {
+    height: 1px;
+}
+
+.height-40 {
+    height: 40px;
 }
 
 .height-60 {
@@ -145,10 +189,22 @@ html, body {
     margin-bottom: 5px;
 }
 
+.bottom-margin-30 {
+    margin-bottom: 30px;
+}
+
+.right-margin-20 {
+    margin-right: 20px;
+}
+
 .width-20-percent {
     width: 20%;
 }
 
 .width-40-percent {
     width: 40%;
+}
+
+.border-radius-full {
+    border-radius: 100%;
 }
