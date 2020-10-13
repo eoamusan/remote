@@ -189,6 +189,10 @@ html, body {
     margin-bottom: 5px;
 }
 
+.bottom-margin-10 {
+    margin-bottom: 10px;
+}
+
 .bottom-margin-30 {
     margin-bottom: 30px;
 }
@@ -207,4 +211,15 @@ html, body {
 
 .border-radius-full {
     border-radius: 100%;
+}
+
+button:disabled {
+    opacity: 0.5;
+    cursor: default;
+}
+
+.Toastify__toast {
+    min-height: 60px !important;
+    padding-bottom: 10px !important;
+    border-radius: 7px !important;
 }

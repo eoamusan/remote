@@ -1,8 +1,8 @@
 import { connectRouter } from 'connected-react-router'
 import { combineReducers } from 'redux'
-import counter from './counter'
+import people from './peopleReducer'
 
 export default (history) => combineReducers({
     router: connectRouter(history),
-    counter
+    people
 })

@@ -1,17 +1,21 @@
-import React, { useEffect } from 'react'
+import { push } from 'connected-react-router';
+import { currency } from 'helpers';
+import React from 'react'
+import { useDispatch } from 'react-redux';
+import { peopleActions } from 'redux/actions';
 import styled from 'styled-components'
 import Button from 'styles/shared/Button';
-import AOS from 'aos';
 
 const Person = ({ person }) => {
-    useEffect(() => {
-        AOS.init({
-            duration: 500
-        })
-    }, []);
+    const dispatch = useDispatch();
+
+    const edit = () => {
+        dispatch(peopleActions.setPersonToEdit(person));
+        dispatch(push(`/edit-person/${person.id}`));
+    }
 
     return (
-        <PersonContainer data-aos="fade-up" className="white-bg display-flex align-items-center">
+        <PersonContainer className="white-bg display-flex align-items-center">
             <div className="width-20-percent">
                 <p className="size-one-rem weight-500 bottom-margin-5">{person.name}</p>
                 <p className="size-pointsevenfive-rem gray-color">{person.dob}</p>
@@ -20,9 +24,9 @@ const Person = ({ person }) => {
             <div className="width-20-percent gray-color">{person.country}</div>
             <div className="width-40-percent gray-color display-flex align-items-center space-between">
                 <div>
-                    {person.salary} USD per year
+                    {person.salary ? currency(person.salary) : 0} USD per year
                 </div>
-                <Button className="inverted no-shrink border-box">Edit</Button>
+                <Button onClick={edit} className="inverted no-shrink border-box">Edit</Button>
             </div>
         </PersonContainer>
     )

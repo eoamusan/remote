@@ -1,13 +1,13 @@
 import React from 'react'
 import styled, { css } from 'styled-components'
 
-const Input = ({ type, data, onChange }) => (
+const Input = ({ name, value, onChange, type, data }) => (
     <InputContainer className="full-width bottom-margin-30">
         {type === "text" || type === "number" ?
-            <FormInput className="full-width bottom-margin-5" placeholder={data.placeholder} type={type} onChange={onChange} />
+            <FormInput className="full-width bottom-margin-5" required name={name} value={value || ""} placeholder={data.placeholder} type={type} onChange={onChange} />
             :
-            <FormSelect className="full-width bottom-margin-5" onChange={onChange}>
-                <option value="" disabled selected>{data.placeholder}</option>
+            <FormSelect className="full-width bottom-margin-5" required name={name} value={value || ""} onChange={onChange}>
+                <option value="" disabled>{data.placeholder}</option>
                 {data.selectData?.map((option, index) =>
                     <option key={index}>{option}</option>
                 )}
